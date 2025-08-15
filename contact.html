@@ -31,40 +31,54 @@
   </header>
 
   <main>
-    <section class="contact-section reveal">
-      <h1 style="text-align:center;">Contact Us</h1>
-      <form name="contact-cba" method="POST" data-netlify="true" class="contact-form wow-form" autocomplete="off">
-        <div class="form-group wow-group">
-          <label for="name"><span class="wow-icon">👤</span> Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group wow-group">
-          <label for="email"><span class="wow-icon">📧</span> Email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group wow-group">
-          <label for="flavor"><span class="wow-icon">🍵</span> Favorite Chai Flavor</label>
-          <input type="text" id="flavor" name="flavor" required />
-        </div>
-        <div class="form-group wow-group">
-          <label for="message"><span class="wow-icon">💬</span> Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn wow-btn">Send Message 🚀</button>
-        <p class="wow-success" style="display:none;text-align:center;color:#014421;font-weight:600;margin-top:1rem;">Thank you for contacting us!</p>
-      </form>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var form = document.querySelector('form[name="contact-cba"]');
-          if(form) {
-            form.addEventListener('submit', function(e) {
-              setTimeout(function(){
-                document.querySelector('.wow-success').style.display = 'block';
-              }, 100);
-            });
-          }
-        });
-      </script>
+  <section class="contact-section reveal">
+    <h1 style="text-align:center;">Contact Us</h1>
+    <form name="contact-cba" method="POST" data-netlify="true" class="contact-form wow-form" autocomplete="off">
+      
+      <!-- Netlify Hidden Field -->
+      <input type="hidden" name="form-name" value="contact-cba" />
+
+      <div class="form-group wow-group">
+        <label for="name"><span class="wow-icon">👤</span> Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="form-group wow-group">
+        <label for="email"><span class="wow-icon">📧</span> Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group wow-group">
+        <label for="flavor"><span class="wow-icon">🍵</span> Favorite Chai Flavor</label>
+        <input type="text" id="flavor" name="flavor" required />
+      </div>
+
+      <div class="form-group wow-group">
+        <label for="message"><span class="wow-icon">💬</span> Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn wow-btn">Send Message 🚀</button>
+      <p class="wow-success" style="display:none;text-align:center;color:#014421;font-weight:600;margin-top:1rem;">
+        Thank you for contacting us!
+      </p>
+    </form>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.querySelector('form[name="contact-cba"]');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        setTimeout(function () {
+          document.querySelector('.wow-success').style.display = 'block';
+        }, 100);
+      });
+    }
+  });
+</script>
+
       <div class="hq-info">
         <h2>Our Headquarters</h2>
         <p>123 Biscuit Lane, Chai Nagar, India 400001</p>
