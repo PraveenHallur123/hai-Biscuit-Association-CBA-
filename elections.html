@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elections & Voting | Chai Biscuit Association</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="/assets/script.js" defer></script>
+</head>
+<body>
+  <header>
+      <nav class="navbar">
+        <div class="logo">CBA</div>
+        <div class="hamburger" aria-label="Toggle menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="elections.html" class="active">Elections</a></li>
+          <li><a href="constitution.html">Constitution</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section class="elections-section reveal">
+      <h1>Upcoming Elections</h1>
+      <p>Next CBA Leadership Election: <strong>October 15, 2025</strong></p>
+      <form name="cba-vote" method="POST" data-netlify="true" class="vote-form">
+        <h2 style="text-align:center;margin-bottom:1.5rem;">Voting Pool</h2>
+        <div class="poll-options">
+          <div class="poll-option">
+            <div class="poll-name">Basavaraj</div>
+            <label>
+              <input type="radio" name="member" value="Basavaraj" required>
+              <img src="https://i.ibb.co/F4x9kT5Q/basu.jpg" alt="Basavaraj" class="poll-avatar">
+            </label>
+          </div>
+          <div class="poll-option">
+            <div class="poll-name">Praveen</div>
+            <label>
+              <input type="radio" name="member" value="Praveen">
+              <img src="https://i.ibb.co/KzQht3mj/CEO-2.png" alt="Praveen" class="poll-avatar">
+            </label>
+          </div>
+          <div class="poll-option">
+            <div class="poll-name">Shankar</div>
+            <label>
+              <input type="radio" name="member" value="Shankar">
+              <img src="https://i.ibb.co/zTsm7DLN/shankar.jpg" alt="Shankar" class="poll-avatar">
+            </label>
+          </div>
+          <div class="poll-option">
+            <div class="poll-name">Nagu</div>
+            <label>
+              <input type="radio" name="member" value="Nagu">
+              <img src="https://i.ibb.co/67R05xvn/nagu.jpg" alt="Nagu" class="poll-avatar">
+            </label>
+          </div>
+          <div class="poll-option">
+            <div class="poll-name">Shivu</div>
+            <label>
+              <input type="radio" name="member" value="Shivu">
+              <img src="https://i.ibb.co/vCyQsY1j/shivu.jpg" alt="Shivu" class="poll-avatar">
+            </label>
+          </div>
+          <div class="poll-option">
+            <div class="poll-name">Mahaling</div>
+            <label>
+              <input type="radio" name="member" value="Mahaling">
+              <img src="https://i.ibb.co/nMPxw1QX/manu.jpg" alt="Mahaling" class="poll-avatar">
+            </label>
+          </div>
+          <div class="poll-option">
+            <div class="poll-name">Mahesh</div>
+            <label>
+              <input type="radio" name="member" value="Mahesh">
+              <img src="https://i.ibb.co/VcYm6QZS/mahesh.jpg" alt="Mahesh" class="poll-avatar">
+            </label>
+          </div>
+        </div>
+        <input type="text" name="voterName" placeholder="Your Name" required style="margin-top:1.2rem;">
+        <button type="submit" class="btn" style="margin-top:1.2rem;width:100%;">Submit Vote</button>
+      </form>
+      <h2>Election Rules</h2>
+      <ol class="election-rules">
+        <li>Only registered biscuit enthusiasts may vote.</li>
+        <li>No dunking during voting hours.</li>
+        <li>Each member may cast one vote per biscuit type.</li>
+        <li>Bribing with cream biscuits is strictly prohibited (but often attempted).</li>
+        <li>Results will be announced with appropriate fanfare and tea.</li>
+      </ol>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var voteForm = document.querySelector('form[name="cba-vote"]');
+          if(voteForm) {
+            voteForm.addEventListener('submit', function(e) {
+              setTimeout(function(){
+                alert('Thank you for voting!');
+              }, 100);
+            });
+          }
+        });
+      </script>
+    </section>
+  </main>
+
+  <footer>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>About CBA</h4>
+          <p style="margin-bottom:0.7rem;">The Chai Biscuit Association is dedicated to the noble pursuit of dunking, sipping, and biscuit diplomacy. Join us for a better, crunchier tomorrow!</p>
+          <div class="social-icons">
+            <a href="https://instagram.com/" target="_blank" class="icon icon-instagram" title="Instagram"></a>
+            <a href="https://wa.me/" target="_blank" class="icon icon-whatsapp" title="WhatsApp"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="elections.html">Elections</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="/legal/terms.html">Terms of Use</a></li>
+            <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2025 Chai Biscuit Association. All rights reserved. | <a href="https://hallunix.tech" target="_blank" style="color:var(--gold);text-decoration:underline;"> Powered By Hallunix Tech Solutions</a></div>
+  </footer>
+</body>
+</html>

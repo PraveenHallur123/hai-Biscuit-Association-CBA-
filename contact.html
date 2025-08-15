@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Chai Biscuit Association</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="/assets/script.js" defer></script>
+</head>
+<body>
+  <header>
+      <nav class="navbar">
+        <div class="logo">CBA</div>
+        <div class="hamburger" aria-label="Toggle menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="elections.html">Elections</a></li>
+          <li><a href="constitution.html">Constitution</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section class="contact-section reveal">
+      <h1 style="text-align:center;">Contact Us</h1>
+      <form name="contact-cba" method="POST" data-netlify="true" class="contact-form wow-form" autocomplete="off">
+        <div class="form-group wow-group">
+          <label for="name"><span class="wow-icon">👤</span> Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group wow-group">
+          <label for="email"><span class="wow-icon">📧</span> Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group wow-group">
+          <label for="flavor"><span class="wow-icon">🍵</span> Favorite Chai Flavor</label>
+          <input type="text" id="flavor" name="flavor" required />
+        </div>
+        <div class="form-group wow-group">
+          <label for="message"><span class="wow-icon">💬</span> Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn wow-btn">Send Message 🚀</button>
+        <p class="wow-success" style="display:none;text-align:center;color:#014421;font-weight:600;margin-top:1rem;">Thank you for contacting us!</p>
+      </form>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var form = document.querySelector('form[name="contact-cba"]');
+          if(form) {
+            form.addEventListener('submit', function(e) {
+              setTimeout(function(){
+                document.querySelector('.wow-success').style.display = 'block';
+              }, 100);
+            });
+          }
+        });
+      </script>
+      <div class="hq-info">
+        <h2>Our Headquarters</h2>
+        <p>123 Biscuit Lane, Chai Nagar, India 400001</p>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160982606!2d72.74109999999999!3d19.0821978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63b0c1b1e7d%3A0x1a1a1a1a1a1a1a1a!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>About CBA</h4>
+          <p style="margin-bottom:0.7rem;">The Chai Biscuit Association is dedicated to the noble pursuit of dunking, sipping, and biscuit diplomacy. Join us for a better, crunchier tomorrow!</p>
+          <div class="social-icons">
+            <a href="https://instagram.com/" target="_blank" class="icon icon-instagram" title="Instagram"></a>
+            <a href="https://wa.me/" target="_blank" class="icon icon-whatsapp" title="WhatsApp"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="elections.html">Elections</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="/legal/terms.html">Terms of Use</a></li>
+            <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2025 Chai Biscuit Association. All rights reserved. | <a href="https://hallunix.tech" target="_blank" style="color:var(--gold);text-decoration:underline;"> Powered By Hallunix Tech Solutions</a></div>
+  </footer>
+</body>
+</html>
